@@ -37,7 +37,7 @@ const BlurText: React.FC<BlurTextProps> = ({
   const ref = useRef<HTMLParagraphElement>(null);
   const animatedCount = useRef(0);
 
-  // Default animations based on direction
+  // Default animation direction
   const defaultFrom: Record<string, any> = direction === 'top'
     ? { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,-50px,0)' }
     : { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,50px,0)' };
@@ -92,12 +92,15 @@ const BlurText: React.FC<BlurTextProps> = ({
   );
 
   return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
+    <p
+      ref={ref}
+      className={`flex flex-wrap will-change-[transform,filter,opacity] ${className}`}
+    >
       {springs.map((props, index) => (
         <AnimatedSpan
           key={index}
           style={props}
-          className="inline-block will-change-[transform,filter,opacity]"
+          className="inline-block"
         >
           {elements[index] === ' ' ? '\u00A0' : elements[index]}
           {animateBy === 'words' && index < elements.length - 1 && '\u00A0'}
