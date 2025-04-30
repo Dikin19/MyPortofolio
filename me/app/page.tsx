@@ -1,9 +1,14 @@
+'use client'
+
 import BlurText from "./components/BlurText/BlurText";
 import Lanyard from "./components/Lanyard/Lanyard";
 import RotatingText from "./components/RotatingText/RotatingText";
 import SplitText from "./components/SplitText/SplitText";
 import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import Threads from "./components/Threads/Threads";
+// import ClickSpark from "./components/ClickSpark/ClickSpark";
+import GradientText from "./components/GradientText/GradientText";
+import CircularText from "./components/CircularText/CircularText";
 
 export default function Home() {
   return (
@@ -15,12 +20,21 @@ export default function Home() {
           enableMouseInteraction={true}
         />
       </div>
+
       <div className="container mx-auto h-screen"> {/* membuat container yan ditandai mx-auto yang berarti untuk mempunya space kiri dan kanan dan h-screen membuat tampilan penuh  */}
         <div className="grid grid-cols-12">
 
-          <div className="col-span-6"> {/* membuat grid menjadi 6 untuk bagian kiri dari 12 col */}
+          <div className="col-span-6 relative"> {/* membuat grid menjadi 6 untuk bagian kiri dari 12 col */}
 
-            <Lanyard position={[0, 0, 18]} gravity={[0, -40, 0]} /> {/* membuat lanyard dengan posisi dan gravitasi yang ditentukan */}
+            <AnimatedContent>
+              <Lanyard position={[0, 0, 18]} gravity={[0, -40, 0]} /> {/* membuat lanyard dengan posisi dan gravitasi yang ditentukan */}
+              <CircularText
+                text="WELLCOME*TO*MYPORTOFOLIO*"
+                onHover="speedUp"
+                spinDuration={25}
+                className="absolute top-10 left-5"
+              />
+            </AnimatedContent>
 
           </div>
 
@@ -31,7 +45,7 @@ export default function Home() {
                 <AnimatedContent>
 
                   <div className="flex items-center gap-4">
-                    <h1 className="text-2xl text-white font-bold">Welcome to My Page</h1>
+                    <h1 className="text-2xl text-white font-bold">Here we go ------</h1>
                     <RotatingText
                       texts={['Front End', 'Back End', 'Full Stack Developer', 'Software Engineer']}
                       mainClassName="px-2 sm:px-2 md:px-3 bg-[#D4AF37] text-white overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold inline-flex animation-all"
@@ -80,6 +94,19 @@ export default function Home() {
                   animateBy="words"
                   direction="bottom"
                 />
+                <div className="flex items-center">
+
+                  <GradientText
+                    colors={["#ffff", "#4079ff", "#001F54", "#4079ff", "#40ffaa"]}
+                    animationSpeed={3}
+                    showBorder={false}
+                    className="px-6 py-2 rounded-lg border"
+                  >
+                    Contact Me
+                  </GradientText>
+
+                </div>
+
 
               </div>
 
