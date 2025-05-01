@@ -17,6 +17,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Muhamad Sodikin",
   description: "Muhamad Sodikin's Personal Website",
+  icons: '/images/experiences/dikin11.png'
 };
 
 export default function RootLayout({

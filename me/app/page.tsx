@@ -9,11 +9,11 @@ export default function Home() {
           <div className="text-white">
             Home
           </div>
-          <Threads
+          {/* <Threads
             amplitude={1}
             distance={0}
             enableMouseInteraction={true}
-          />
+          /> */}
         </div>
       </BaseLayout>
     </div>

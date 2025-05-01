@@ -20,6 +20,8 @@ const SidebarProvider = ({ children }: Props) => {
         setIsCollapsedSidebbar((prev) => !prev);
     };
 
+
+
     return (
         <SidebarContext.Provider
             value={{

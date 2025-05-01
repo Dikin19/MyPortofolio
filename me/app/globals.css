@@ -43,6 +43,8 @@ body {
 
 .sidebar__wrapper {
   position: relative;
+  display: flex;
+  transition: all 0.3s ease;
 }
 
 
@@ -52,6 +54,8 @@ body {
   background-color:#001F54;
   padding: 1rem;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 250px;
+  
 }
 
 .sidebar__top {
@@ -95,12 +99,14 @@ body {
 
 .sidebar__name {
   margin-left: 0.5rem;
+  transition: opacity 0.3s ease;
 }
 
 .sidebar__logo-name {
   font-size: 1rem;
   font-weight: 600;
   color: #ffff;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -130,3 +136,35 @@ body {
 [data-collapse="true"] .sidebar__logo-name {
   display: none;
 }
+
+/*test*/
+
+.sidebar.collapsed {
+  width: 80px; /* Width for collapsed state */
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 80px; /* Default collapsed width for small screens */
+  }
+
+  .sidebar.collapsed {
+      width: 80px; /* Keep the same width when collapsed */
+  }
+
+  .sidebar__logo-name,
+  .sidebar__name {
+      display: none; /* Hide text on small screens */
+  }
+
+  .sidebar.collapsed .sidebar__logo-name,
+  .sidebar.collapsed .sidebar__name {
+      display: none; /* Ensure text is hidden when collapsed */
+  }
+}
+
