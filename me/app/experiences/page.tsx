@@ -3,17 +3,18 @@ import Threads from "../components/Threads/Threads";
 
 export default function Experience() {
     return (
-        <div className="bg-[#001F54] min-h-screen">
+        <div className="bg-[#001F54]">
             <BaseLayout>
-                <div className="ml-30 w-[calc(130%-20rem)] h-full relative">
-                    <div className="text-white">
-                        Experiences
-                    </div>
-                    <Threads
+                <div className="text-white">
+                    Experiences
+                </div>
+                <div className="">
+
+                    {/* <Threads
                         amplitude={1}
                         distance={0}
                         enableMouseInteraction={true}
-                    />
+                    /> */}
                 </div>
             </BaseLayout>
         </div>

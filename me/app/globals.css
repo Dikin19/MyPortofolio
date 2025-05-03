@@ -41,8 +41,23 @@ body {
   gap: 2rem;
 }
 
+
+.collapsed {
+  width: 80px; /* Atur lebar sidebar saat terlipat */
+}
+
+.sidebar__logo-name {
+  transition: opacity 0.3s ease; /* Transisi untuk efek saat sidebar terlipat */
+}
+
+.hidden {
+  opacity: 0; /* Sembunyikan elemen dengan opacity */
+  visibility: hidden; /* Sembunyikan elemen dari tampilan */
+}
+
+
 .sidebar__wrapper {
-  position: relative;
+  position: fixed;
   display: flex;
   transition: all 0.3s ease;
 }
@@ -54,9 +69,9 @@ body {
   background-color:#001F54;
   padding: 1rem;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  width: 250px;
+  width: 270px;
   
-}
+} 
 
 .sidebar__top {
   width: max-content;
@@ -84,7 +99,7 @@ body {
   font-size: 1rem;
   text-decoration: none;
   color: #ffff;
-  padding: 0.5rem  1rem;
+  padding: 0.9rem  1rem;
   display: flex;
   background-color: #D4AF37;
   margin-bottom: 1rem;

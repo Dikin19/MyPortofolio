@@ -8,11 +8,14 @@ interface Props {
 
 export default function BaseLayout({ children }: Props) {
     return (
-        <div className="layout flex">
+        <div className="flex min-h-screen ">
             <div className="relative">
                 <Sidebar />
             </div>
-            <div className="flex-1">{children}</div>
+            <main className="main-content flex-1 p-4">
+                {children}
+            </main>
         </div>
     );
 }
+

@@ -26,38 +26,36 @@ export default function Sidebar() {
     const { isCollapsedSidebbar, toogleSidebarCollapsedHandler } = useContext(SidebarContext);
 
     return (
-        <>
-            <button className="btn" onClick={toogleSidebarCollapsedHandler}>
-                <IoArrowUndoOutline size={24} />
-            </button>
-            <div className={`sidebar_wrapper ${isCollapsedSidebbar ? 'collapsed' : ''}`}>
-                <aside className={`sidebar ${isCollapsedSidebbar ? 'collapsed' : ''}`}>
-                    <div className="sidebar__top">
-                        <Image
-                            src="/images/experiences/prg.png"
-                            width={80}
-                            height={80}
-                            alt="Developer"
-                            className="sidebar__logo"
-                        />
-                        <p className={`sidebar__logo-name ${isCollapsedSidebbar ? 'hidden' : ''}`}>
-                            Full Stack Developer
-                        </p>
-                    </div>
-                    <ul className="sidebar__list">
-                        {sidebarItems.map(({ name, href, icon: Icon }) => (
-                            <li className="sidebar__item" key={name}>
-                                <Link href={href} className="sidebar__link text-black">
-                                    <span className="sidebar__icon"><Icon /></span>
-                                    <span className={`sidebar__name ${isCollapsedSidebbar ? 'hidden' : ''}`}>
-                                        {name}
-                                    </span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </aside>
-            </div>
-        </>
+        <div className={`sidebar_wrapper ${isCollapsedSidebbar ? 'collapsed' : ''}`}>
+            <aside className={`sidebar ${isCollapsedSidebbar ? 'collapsed' : ''}`}>
+                <div className="sidebar__top">
+                    <button className="btn" onClick={toogleSidebarCollapsedHandler}>
+                        <IoArrowUndoOutline size={24} />
+                    </button>
+                    <Image
+                        src="/images/experiences/prg.png"
+                        width={80}
+                        height={80}
+                        alt="Developer"
+                        className="sidebar__logo"
+                    />
+                    <p className={`sidebar__logo-name ${isCollapsedSidebbar ? 'hidden' : ''}`}>
+                        Full Stack Developer
+                    </p>
+                </div>
+                <ul className="sidebar__list">
+                    {sidebarItems.map(({ name, href, icon: Icon }) => (
+                        <li className="sidebar__item" key={name}>
+                            <Link href={href} className="sidebar__link text-black">
+                                <span className="sidebar__icon"><Icon /></span>
+                                <span className={`sidebar__name ${isCollapsedSidebbar ? 'hidden' : ''}`}>
+                                    {name}
+                                </span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </aside>
+        </div>
     );
 }

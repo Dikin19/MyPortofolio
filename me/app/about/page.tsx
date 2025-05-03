@@ -1,272 +1,153 @@
-'use client'
+"use client";
+import React, { useTransition, useState, ReactNode } from "react";
+import { motion } from "framer-motion";
+import BaseLayout from "../components/BaseLayout/BaseLayout";
+import TabButton from "../components/TabButton/TabButton";
+import AnimatedContent from "../components/AnimatedContent/AnimatedContent";
+import CircularText from "../components/CircularText/CircularText";
+import GradientText from "../components/GradientText/GradientText";
+import RotatingText from "../components/RotatingText/RotatingText";
+import BlurText from "../components/BlurText/BlurText";
 
-import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
-import BlurText from "@/app/components/BlurText/BlurText";
-import CircularText from "@/app/components/CircularText/CircularText";
-import GradientText from "@/app/components/GradientText/GradientText";
-import Lanyard from "@/app/components/Lanyard/Lanyard";
-import RotatingText from "@/app/components/RotatingText/RotatingText";
-import ScrollVelocity from "@/app/components/ScrollVelocity/ScrollVelocity";
-import SplitText from "@/app/components/SplitText/SplitText";
-import Threads from "@/app/components/Threads/Threads";
-import { Timeline } from "@/app/components/Timelines/Timeline";
+interface TabItem {
+    title: string;
+    id: string;
+    content: ReactNode;
+}
 
-export default function Home() {
-  const data = [
+const TAB_DATA: TabItem[] = [
     {
-      title: "2024",
-      content: (
-        <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            WOC ( Warkop Or Coffee Shop ) adalah sebuah webiste restaurant yang menyediakan sebuah menu minuman dingin dari WOC, dengan adanya menu ini akan mempermudah customer untuk melihat menu langsung melalui website ini dengan beberapa feature login, register, home, products, delete, infinite scroll, search, detail product, wish , dan addWishlist  yang bisa menambah menu kedalam wihs. website ini dibuat menggunakan next.js, typescript, MongoDb, server side, TailwindCSS, dan vercel untuk deploy app ini. Anda bisa mencoba applikasi ini melalui link dibawah ini :
-
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/images/experiences/woc.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/experiences/woc.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/experiences/woc.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/experiences/woc.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
-        </div>
-      ),
+        title: "Education",
+        id: "education",
+        content: (
+            <ul className="list-disc pl-2">
+                <li>University of Binasarana Informatika, Depok.</li>
+                <li>Hacktiv8, Jakarta.</li>
+                <li>Basic English course, Kediri Jawa Timur.</li>
+            </ul>
+        ),
     },
     {
-      title: "Early 2023",
-      content: (
-        <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
-        </div>
-      ),
+        title: "Organizatition",
+        id: "organizatition",
+        content: (
+            <ul className="list-disc pl-2">
+                <li>Official futsal dudep.</li>
+                <li>Official futsal 13.</li>
+                <li>Ukm of UBSI.</li>
+            </ul>
+        ),
     },
-    {
-      title: "Changelog",
-      content: (
-        <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
-          </p>
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
-        </div>
-      ),
-    },
-  ];
+];
 
-  return (
-    <div className="min-h-screen overflow- x-hidden bg-[#001F54]">
-      <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
-        <Threads
-          amplitude={1}
-          distance={0}
-          enableMouseInteraction={true}
-        />
-      </div>
+export default function Contact() {
+    const [tab, setTab] = useState<string>("skills");
+    const [isPending, startTransition] = useTransition();
 
-      <div className="container mx-auto h-screen"> {/* membuat container yan ditandai mx-auto yang berarti untuk mempunya space kiri dan kanan dan h-screen membuat tampilan penuh  */}
-        <div className="grid grid-cols-12">
+    const handleTabChange = (id: string) => {
+        startTransition(() => {
+            setTab(id);
+        });
+    };
 
-          <div className="col-span-6 relative"> {/* membuat grid menjadi 6 untuk bagian kiri dari 12 col */}
+    const currentTab = TAB_DATA.find((t) => t.id === tab);
 
-            <AnimatedContent>
-              <Lanyard position={[0, 0, 18]} gravity={[0, -40, 0]} /> {/* membuat lanyard dengan posisi dan gravitasi yang ditentukan */}
-              <CircularText
-                text="WELLCOME*TO*MYPORTOFOLIO*"
-                onHover="speedUp"
-                spinDuration={25}
-                className="absolute top-10 left-5"
-              />
-            </AnimatedContent>
+    return (
+        <div className="bg-[#001F54] min-h-fit">
+            <BaseLayout>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-16 text-white">
+                    <section className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-x-8 sm:gap-y-12 space-y-reverse space-y-12 sm:space-y-0 items-center" id="about">
 
-          </div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className="sm:col-span-7 text-center sm:text-left"
+                        >
+                            <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+                                <AnimatedContent>
+                                    <div className="flex items-center gap-4 mb-8 mt-16">
+                                        <RotatingText
+                                            texts={['About Me', 'About Me']}
+                                            mainClassName="px-2 sm:px-2 md:px-3 bg-[#D4AF37] text-4xl font-bold text-white mb-4 overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold inline-flex animation-all"
+                                            staggerFrom={"last"}
+                                            initial={{ y: "100%" }}
+                                            animate={{ y: 0 }}
+                                            exit={{ y: "-120%" }}
+                                            staggerDuration={0.025}
+                                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                            rotationInterval={2000}
+                                        />
 
-          <div className="col-span-6"> {/* membuat grid menjadi 6 untuk bagian kanan dari 12 col */}
-            <div className="flex items-center h-full">
+                                    </div>
+                                </AnimatedContent>
+                                <AnimatedContent>
+                                    <BlurText
+                                        text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, problem-solving, 
+                                              and a strong work ethic. After transitioning from the coffee industry to technology, I discovered a deep passion for programming
+                                              and pursued self-learning through both online and offline courses. I possess a strong ability to quickly adapt and continuously 
+                                              improve with focus on doing repetition practice and analyzing user requirements to deliver effective, user-centered solutions as Front-end."
+                                        delay={50}
+                                        className="text-white text-lg"
+                                        animateBy="words"
+                                        direction="bottom"
+                                    />
+                                    <div className="flex flex-col h-full">
+                                        <GradientText
+                                            colors={["#ffff", "#4079ff", "#001F54", "#4079ff", "#40ffaa"]}
+                                            animationSpeed={3}
+                                            showBorder={false}
+                                            className="px-4 py-1 mb-15"
+                                        >
+                                            <div className="flex flex-row justify-start mt-8">
+                                                {TAB_DATA.map((t) => (
+                                                    <TabButton
+                                                        key={t.id}
+                                                        selectTab={() => handleTabChange(t.id)}
+                                                        active={tab === t.id}
+                                                        highlightColor={
+                                                            t.id === "education"
+                                                                ? "text-white"
+                                                                : t.id === "organizatition"
+                                                                    ? "text-white"
+                                                                    : "text-white"
+                                                        }
+                                                    >
+                                                        {t.title}
+                                                    </TabButton>
+                                                ))}
+                                            </div>
+                                            <div className="mt-8">{currentTab?.content}</div>
+                                        </GradientText>
+                                    </div>
+                                </AnimatedContent>
+                            </div>
 
-              <div className="flex flex-col gap-6">
-                <AnimatedContent>
+                        </motion.div>
 
-                  <div className="flex items-center gap-4">
-                    <h1 className="text-2xl text-white font-bold">Here we go</h1>
-                    <RotatingText
-                      texts={['Front End', 'Back End', 'Full Stack Developer', 'Software Engineer']}
-                      mainClassName="px-2 sm:px-2 md:px-3 bg-[#D4AF37] text-white overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold inline-flex animation-all"
-                      staggerFrom={"last"}
-                      initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      exit={{ y: "-120%" }}
-                      staggerDuration={0.025}
-                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                      transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                      rotationInterval={2000}
-                    />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className="sm:col-span-5 flex justify-center sm:justify-end mb-12 sm:mb-0"
+                        >
+                            <div className="w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] relative mb-6 sm:mb-4">
+                                <AnimatedContent>
+                                    <CircularText
+                                        text="WELLCOME*TO CONNECTION*EACH OTHER*"
+                                        onHover="speedUp"
+                                        spinDuration={25}
+                                        className="absolute mt-10 ml-10"
+                                        color="#D4AF37"
+                                    />
+                                </AnimatedContent>
+                            </div>
+                        </motion.div>
 
-                  </div>
-                </AnimatedContent>
-
-                <div className="flex flex-col items-start">
-                  <SplitText
-                    text="I'm Muhamad Sodikin"
-                    className="text-2xl text-white font-semibold text-start"
-                    delay={50}
-                    animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                    animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                    threshold={0.2}
-                    rootMargin="-50px"
-                  />
-
-                  <SplitText
-                    text="Full Stack Developer"
-                    className="text-2xl font-semibold text-[#D4AF37] text-start"
-                    delay={100}
-                    animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                    animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                    threshold={0.2}
-                    rootMargin="-50px"
-                  />
-                </div> {/* membuat split text */}
-
-                <BlurText
-                  text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, problem-solving, 
-                  and a strong work ethic. After transitioning from the coffee industry to technology, I discovered a deep passion for programming
-                  and pursued self-learning through both online and offline courses. I possess a strong ability to quickly adapt and continuously 
-                  improve with focus on doing repetition practice and analyzing user requirements to deliver effective, user-centered solutions as Front-end."
-                  delay={50}
-                  className="text-white text-lg"
-                  animateBy="words"
-                  direction="bottom"
-                />
-                <div className="flex items-center">
-
-                  <GradientText
-                    colors={["#ffff", "#4079ff", "#001F54", "#4079ff", "#40ffaa"]}
-                    animationSpeed={3}
-                    showBorder={false}
-                    className="px-6 py-2 rounded-lg border"
-                  >
-                    Contact Me
-                  </GradientText>
-
+                    </section>
                 </div>
-
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <ScrollVelocity
-        texts={['Thank you for coming']}
-        className="text-white text-3xl"
-      />
-      <Timeline data={data} />
-    </div>
-  );
+            </BaseLayout >
+        </div >
+    );
 }
