@@ -21,7 +21,7 @@ export default function Home() {
               className="sm:col-span-7 text-center sm:text-left"
             >
               <AnimatedContent>
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 mt-0">
                   <h1 className="text-2xl sm:text-3xl font-bold">Hello, I&apos;m</h1>
                   <RotatingText
                     texts={['Muhamad Sodikin', 'Front End', 'Back End', 'Full Stack Developer', 'Software Engineer']}
@@ -63,7 +63,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="sm:col-span-5 flex justify-center sm:justify-end mb-12 sm:mb-0"
             >
-              <div className="w-[180px] sm:w-[250px] lg:w-[350px] relative mb-6 sm:mb-4">
+              <div className="w-[180px] sm:w-[250px] lg:w-[350px] relative">
                 <AnimatedContent>
                   <Lanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
                 </AnimatedContent>

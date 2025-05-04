@@ -9,11 +9,6 @@ export default function Project() {
                     <div className="text-white">
                         Projects
                     </div>
-                    <Threads
-                        amplitude={1}
-                        distance={0}
-                        enableMouseInteraction={true}
-                    />
                 </div>
             </BaseLayout>
         </div>
