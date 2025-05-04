@@ -6,13 +6,18 @@ import Lanyard from "./components/Lanyard/Lanyard";
 import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
 import RotatingText from "./components/RotatingText/RotatingText";
 import BlurText from "./components/BlurText/BlurText";
+import AchievementsSection from "./components/Achivement/Achivement";
 
 export default function Home() {
   return (
     <div className="bg-[#001F54] min-h-fit">
       <BaseLayout>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-16 text-white">
-          <section className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-x-8 sm:gap-y-12 space-y-reverse space-y-12 sm:space-y-0 items-center" id="about">
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-2 text-white">
+          <AchievementsSection />
+          <section className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-y-0 sm:gap-y-0 items-center mt-[-8px]" id="about">
+
+
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -21,7 +26,7 @@ export default function Home() {
               className="sm:col-span-7 text-center sm:text-left"
             >
               <AnimatedContent>
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 mt-0">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
                   <h1 className="text-2xl sm:text-3xl font-bold">Hello, I&apos;m</h1>
                   <RotatingText
                     texts={['Muhamad Sodikin', 'Front End', 'Back End', 'Full Stack Developer', 'Software Engineer']}
@@ -47,7 +52,7 @@ export default function Home() {
               />
               <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
                 <Link
-                  href="/"
+                  href="/images/experiences/CV.pdf"
                   className="px-1 py-1 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:opacity-90 text-white"
                 >
                   <span className="block bg-[#D4AF37] rounded-full px-5 py-2">
