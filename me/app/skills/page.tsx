@@ -48,14 +48,13 @@ const Skill = () => {
             <BaseLayout>
                 <div className="container mx-auto px-2 sm:px-6 lg:px-12 py-2 text-white">
 
-
                     <section id="skills">
                         <div className="container mx-auto px-2">
                             <div className="text-center mb-12">
                                 <h2 className="text-[#D4AF37] text-4xl font-bold">Full Stack Developer Skills</h2>
                                 <p className="text-white mt-4 max-w-2xl mx-auto">
-                                    Menguasai keterampilan dari frontend hingga backend, dengan fokus pada performa,
-                                    skalabilitas, dan pengalaman pengguna yang luar biasa.
+                                    Belajar keterampilan dari frontend hingga backend, dengan fokus pada performa dan
+                                    skalabilitas.
                                 </p>
                             </div>
 
