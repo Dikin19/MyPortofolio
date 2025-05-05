@@ -1,5 +1,6 @@
 'use client'
 import BaseLayout from "../components/BaseLayout/BaseLayout";
+import Footer from "../components/Footer/foteer";
 import { Timeline } from "../components/Timelines/Timeline";
 
 
@@ -199,6 +200,7 @@ export default function Experiences() {
                     </section>
                 </div>
             </BaseLayout>
+            <Footer />
         </div>
     );
 }

@@ -8,6 +8,7 @@ import CircularText from "../components/CircularText/CircularText";
 import GradientText from "../components/GradientText/GradientText";
 import RotatingText from "../components/RotatingText/RotatingText";
 import BlurText from "../components/BlurText/BlurText";
+import Footer from "../components/Footer/foteer";
 
 interface TabItem {
     title: string;
@@ -148,6 +149,7 @@ export default function Contact() {
                     </section>
                 </div>
             </BaseLayout >
+            <Footer />
         </div >
     );
 }

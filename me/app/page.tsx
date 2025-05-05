@@ -7,6 +7,7 @@ import AnimatedContent from "@/app/components/AnimatedContent/AnimatedContent";
 import RotatingText from "./components/RotatingText/RotatingText";
 import BlurText from "./components/BlurText/BlurText";
 import AchievementsSection from "./components/Achivement/Achivement";
+import Footer from "./components/Footer/foteer";
 
 export default function Home() {
   return (
@@ -74,10 +75,10 @@ export default function Home() {
                 </AnimatedContent>
               </div>
             </motion.div>
-
           </section>
         </div>
       </BaseLayout>
+      <Footer />
     </div>
   );
 }

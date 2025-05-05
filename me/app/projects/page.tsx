@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectTag from "../components/ProjectsTag/projectTag";
 import ProjectCard from "../components/ProjectCard/projectCard";
+import Footer from "../components/Footer/foteer";
 
 interface Project {
     id: number;
@@ -100,6 +101,7 @@ export default function Project() {
                     </ul>
                 </section>
             </BaseLayout>
+            <Footer />
         </div>
     );
 }
