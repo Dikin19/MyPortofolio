@@ -6,7 +6,6 @@ interface ProjectCardProps {
     title: string;
     description: string;
     gitUrl: string;
-    // previewUrl: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -14,7 +13,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     description,
     gitUrl,
-    // previewUrl,
 }) => {
     return (
         <div className="rounded-xl overflow-hidden shadow-lg bg-[#001F54]">
@@ -35,16 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             className="h-14 w-14 flex items-center justify-center border-2 border-[#ADB7BE] hover:border-white rounded-full transition-colors duration-300"
                         >
                             <EyeIcon className="h-8 w-8 text-[#ADB7BE] group-hover:text-white transition-colors duration-300" />
-                            {/* <CodeBracketIcon className="h-8 w-8 text-[#ADB7BE] group-hover:text-white transition-colors duration-300" /> */}
                         </a>
-                        {/* <a
-                            href={previewUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="h-14 w-14 flex items-center justify-center border-2 border-[#ADB7BE] hover:border-white rounded-full transition-colors duration-300"
-                        >
-                            <EyeIcon className="h-8 w-8 text-[#ADB7BE] group-hover:text-white transition-colors duration-300" />
-                        </a> */}
                     </div>
                 </div>
             </div>

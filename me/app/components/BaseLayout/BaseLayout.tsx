@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar/page";
 
 interface Props {
     children: ReactNode | ReactNode[];
-    sidebarOverlay?: ReactNode; // 👈 tambahkan ini untuk menerima Threads
+    sidebarOverlay?: ReactNode;
 }
 
 export default function BaseLayout({ children }: Props) {

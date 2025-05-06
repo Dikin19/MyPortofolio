@@ -21,7 +21,7 @@ const TAB_DATA: TabItem[] = [
         title: "Education",
         id: "education",
         content: (
-            <ul className="list-disc pl-2">
+            <ul className="list-disc pl-5">
                 <li>University of Binasarana Informatika, Depok.</li>
                 <li>Hacktiv8, Jakarta.</li>
                 <li>Basic English course, Kediri Jawa Timur.</li>
@@ -29,20 +29,20 @@ const TAB_DATA: TabItem[] = [
         ),
     },
     {
-        title: "Organizatition",
-        id: "organizatition",
+        title: "Organization",
+        id: "organization",
         content: (
-            <ul className="list-disc pl-2">
+            <ul className="list-disc pl-5">
                 <li>Official futsal dudep.</li>
                 <li>Official futsal 13.</li>
-                <li>Ukm of UBSI.</li>
+                <li>UKM of UBSI.</li>
             </ul>
         ),
     },
 ];
 
-export default function Contact() {
-    const [tab, setTab] = useState<string>("skills");
+export default function About() {
+    const [tab, setTab] = useState<string>("education");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id: string) => {
@@ -54,102 +54,81 @@ export default function Contact() {
     const currentTab = TAB_DATA.find((t) => t.id === tab);
 
     return (
-        <div className="bg-[#001F54] min-h-fit">
+        <div className="bg-[#001F54] text-white">
             <BaseLayout>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-16 text-white">
-                    <section className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-x-8 sm:gap-y-12 space-y-reverse space-y-12 sm:space-y-0 items-center" id="about">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex flex-col items-center text-center space-y-8"
+                    >
 
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            className="sm:col-span-7 text-center sm:text-left"
-                        >
-                            <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                                <AnimatedContent>
-                                    <div className="flex items-center gap-4 mb-8 mt-16">
-                                        <RotatingText
-                                            texts={['About Me', 'About Me']}
-                                            mainClassName="px-2 sm:px-2 md:px-3 bg-[#D4AF37] text-4xl font-bold text-white mb-4 overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold inline-flex animation-all"
-                                            staggerFrom={"last"}
-                                            initial={{ y: "100%" }}
-                                            animate={{ y: 0 }}
-                                            exit={{ y: "-120%" }}
-                                            staggerDuration={0.025}
-                                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                                            rotationInterval={2000}
-                                        />
 
-                                    </div>
-                                </AnimatedContent>
-                                <AnimatedContent>
-                                    <BlurText
-                                        text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, problem-solving, 
-                                              and a strong work ethic. After transitioning from the coffee industry to technology, I discovered a deep passion for programming
-                                              and pursued self-learning through both online and offline courses. I possess a strong ability to quickly adapt and continuously 
-                                              improve with focus on doing repetition practice and analyzing user requirements to deliver effective, user-centered solutions as Front-end."
-                                        delay={50}
-                                        className="text-white text-lg"
-                                        animateBy="words"
-                                        direction="bottom"
-                                    />
-                                    <div className="flex flex-col h-full">
-                                        <GradientText
-                                            colors={["#ffff", "#4079ff", "#001F54", "#4079ff", "#40ffaa"]}
-                                            animationSpeed={3}
-                                            showBorder={false}
-                                            className="px-4 py-1 mb-15"
+                        <AnimatedContent>
+                            <RotatingText
+                                texts={["About Me", "About Me"]}
+                                mainClassName="px-4 bg-[#D4AF37] text-lg sm:text-xl md:text-2xl font-bold text-white py-2 rounded-lg inline-flex"
+                                staggerFrom="last"
+                                initial={{ y: "100%" }}
+                                animate={{ y: 0 }}
+                                exit={{ y: "-120%" }}
+                                staggerDuration={0.025}
+                                splitLevelClassName="overflow-hidden pb-1"
+                                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                rotationInterval={2000}
+                            />
+                        </AnimatedContent>
+
+                        <AnimatedContent>
+                            <BlurText
+                                text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, and problem-solving. After transitioning from the coffee industry to tech, I discovered a deep passion for programming and pursued self-learning both online and offline. I’m focused on rapid improvement and building user-centered solutions."
+                                delay={50}
+                                className="text-sm sm:text-base leading-relaxed max-w-xl"
+                                animateBy="words"
+                                direction="bottom"
+                            />
+                        </AnimatedContent>
+
+                        <AnimatedContent>
+                            <GradientText
+                                colors={["#ffffff", "#4079ff", "#001F54", "#4079ff", "#40ffaa"]}
+                                animationSpeed={3}
+                                showBorder={false}
+                                className="w-full"
+                            >
+                                <div className="flex flex-wrap justify-center gap-2 mt-6">
+                                    {TAB_DATA.map((t) => (
+                                        <TabButton
+                                            key={t.id}
+                                            selectTab={() => handleTabChange(t.id)}
+                                            active={tab === t.id}
+                                            highlightColor="text-white"
                                         >
-                                            <div className="flex flex-row justify-start mt-8">
-                                                {TAB_DATA.map((t) => (
-                                                    <TabButton
-                                                        key={t.id}
-                                                        selectTab={() => handleTabChange(t.id)}
-                                                        active={tab === t.id}
-                                                        highlightColor={
-                                                            t.id === "education"
-                                                                ? "text-white"
-                                                                : t.id === "organizatition"
-                                                                    ? "text-white"
-                                                                    : "text-white"
-                                                        }
-                                                    >
-                                                        {t.title}
-                                                    </TabButton>
-                                                ))}
-                                            </div>
-                                            <div className="mt-8">{currentTab?.content}</div>
-                                        </GradientText>
-                                    </div>
-                                </AnimatedContent>
-                            </div>
-
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            className="sm:col-span-5 flex justify-center sm:justify-end mb-12 sm:mb-0"
-                        >
-                            <div className="w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] relative mb-6 sm:mb-4">
+                                            {t.title}
+                                        </TabButton>
+                                    ))}
+                                </div>
+                                <div className="mt-6 text-sm sm:text-base text-left mx-auto max-w-md">
+                                    {currentTab?.content}
+                                </div>
+                            </GradientText>
+                            <div className="w-40 sm:w-52 md:w-72 h-40 sm:h-52 md:h-72 relative">
                                 <AnimatedContent>
                                     <CircularText
                                         text="WELLCOME*TO CONNECTION*EACH OTHER*"
                                         onHover="speedUp"
                                         spinDuration={25}
-                                        className="absolute mt-10 ml-10"
+                                        className="absolute mt-4 ml-4"
                                         color="#D4AF37"
                                     />
                                 </AnimatedContent>
                             </div>
-                        </motion.div>
-
-                    </section>
+                        </AnimatedContent>
+                    </motion.div>
                 </div>
-            </BaseLayout >
+            </BaseLayout>
             <Footer />
-        </div >
+        </div>
     );
 }

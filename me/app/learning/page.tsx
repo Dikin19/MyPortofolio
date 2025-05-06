@@ -168,13 +168,13 @@ export default function Home() {
         />
       </div>
 
-      <div className="container mx-auto h-screen"> {/* membuat container yan ditandai mx-auto yang berarti untuk mempunya space kiri dan kanan dan h-screen membuat tampilan penuh  */}
+      <div className="container mx-auto h-screen">
         <div className="grid grid-cols-12">
 
-          <div className="col-span-6 relative"> {/* membuat grid menjadi 6 untuk bagian kiri dari 12 col */}
+          <div className="col-span-6 relative">
 
             <AnimatedContent>
-              <Lanyard position={[0, 0, 18]} gravity={[0, -40, 0]} /> {/* membuat lanyard dengan posisi dan gravitasi yang ditentukan */}
+              <Lanyard position={[0, 0, 18]} gravity={[0, -40, 0]} />
               <CircularText
                 text="WELLCOME*TO*MYPORTOFOLIO*"
                 onHover="speedUp"
@@ -185,7 +185,7 @@ export default function Home() {
 
           </div>
 
-          <div className="col-span-6"> {/* membuat grid menjadi 6 untuk bagian kanan dari 12 col */}
+          <div className="col-span-6">
             <div className="flex items-center h-full">
 
               <div className="flex flex-col gap-6">
@@ -228,7 +228,7 @@ export default function Home() {
                     threshold={0.2}
                     rootMargin="-50px"
                   />
-                </div> {/* membuat split text */}
+                </div>
 
                 <BlurText
                   text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, problem-solving, 

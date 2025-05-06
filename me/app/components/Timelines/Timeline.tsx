@@ -101,7 +101,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
                     </div>
                 ))}
-                {/* Garis Timeline */}
                 <div
                     style={{
                         height: height + "px",

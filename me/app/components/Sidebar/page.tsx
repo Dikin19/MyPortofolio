@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
+import { usePathname } from "next/navigation";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsPeople } from "react-icons/bs";
 import { IoArrowUndoOutline } from "react-icons/io5";
@@ -23,6 +24,7 @@ const sidebarItems = [
 ];
 
 export default function Sidebar() {
+    const pathname = usePathname();
     const { isCollapsedSidebbar, toogleSidebarCollapsedHandler } = useContext(SidebarContext);
 
     return (
@@ -46,7 +48,10 @@ export default function Sidebar() {
                 <ul className="sidebar__list">
                     {sidebarItems.map(({ name, href, icon: Icon }) => (
                         <li className="sidebar__item" key={name}>
-                            <Link href={href} className="sidebar__link text-black">
+                            <Link
+                                href={href}
+                                className={`sidebar__link ${pathname === href ? 'active' : ''}`}
+                            >
                                 <span className="sidebar__icon"><Icon /></span>
                                 <span className={`sidebar__name ${isCollapsedSidebbar ? 'hidden' : ''}`}>
                                     {name}

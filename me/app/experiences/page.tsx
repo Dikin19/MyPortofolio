@@ -12,14 +12,14 @@ export default function Experiences() {
             title: "2022 - 2024",
             content: (
                 <div className="text-white">
-                    {/* Job Description Section */}
+
                     <div className="text-center mb-6">
                         <h3 className="text-lg md:text-xl font-semibold">Head Barista</h3>
                         <p className="text-sm md:text-base">ASSKAHVE Coffee Shop, Jahra, Kuwait (On-site)</p>
                         <p className="text-xs md:text-sm text-gray-300">Nov 2022 - Dec 2024</p>
                     </div>
 
-                    {/* Centered Image */}
+
                     <div className="flex justify-center mb-6">
                         <img
 
@@ -31,7 +31,7 @@ export default function Experiences() {
                         />
                     </div>
 
-                    {/* Responsibilities List */}
+
                     <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
                         <li>Managed bar operations, ensuring drink quality and workspace cleanliness</li>
                         <li>Processed orders quickly and accurately</li>
@@ -48,7 +48,7 @@ export default function Experiences() {
             title: "2021 - 2022",
             content: (
                 <div className="text-white">
-                    {/* Job Description Section */}
+
                     <div className="text-center mb-6">
                         <h3 className="text-lg md:text-xl font-semibold">Store Manager</h3>
                         <p className="text-sm md:text-base">SINI COFFEE AND FRIENDS, Cinere (On-site)</p>
@@ -67,7 +67,7 @@ export default function Experiences() {
                         />
                     </div>
 
-                    {/* Responsibilities List */}
+
                     <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
                         <li>Manage store operations, including staff scheduling, service, and cleanliness.</li>
                         <li>Ensure all procedures are followed efficiently.</li>
@@ -84,14 +84,14 @@ export default function Experiences() {
             title: "2021",
             content: (
                 <div className="text-white">
-                    {/* Job Description Section */}
+
                     <div className="text-center mb-6">
                         <h3 className="text-lg md:text-xl font-semibold">Customer Service</h3>
                         <p className="text-sm md:text-base">Bank Jago, Jakarta (On-site)</p>
                         <p className="text-xs md:text-sm text-gray-300">Apr 2021 - Oct 2023</p>
                     </div>
 
-                    {/* Centered Image */}
+
                     <div className="flex justify-center mb-6">
                         <img
 
@@ -103,7 +103,7 @@ export default function Experiences() {
                         />
                     </div>
 
-                    {/* Responsibilities List */}
+
                     <p className="text-sm md:text-base">Customer Service in Inbound, outbound, Vkyc, and Sosta</p>
                     <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
                         <li>Handle incoming and outgoing calls promptly and clearly.</li>
@@ -122,14 +122,14 @@ export default function Experiences() {
             title: "2020 - 2021",
             content: (
                 <div className="text-white">
-                    {/* Job Description Section */}
+
                     <div className="text-center mb-6">
                         <h3 className="text-lg md:text-xl font-semibold">English Teacher</h3>
                         <p className="text-sm md:text-base">BAHASAKUINGGRIS AND INTERPEACE PARE, Kediri Jawa Timur (On-site)</p>
                         <p className="text-xs md:text-sm text-gray-300">Aug 2020 - May 2021</p>
                     </div>
 
-                    {/* Centered Image */}
+
                     <div className="flex justify-center mb-6">
                         <img
 
@@ -141,7 +141,6 @@ export default function Experiences() {
                         />
                     </div>
 
-                    {/* Responsibilities List */}
                     <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
                         <li>Deliver English lessons in a clear and simple manner.</li>
                         <li>Help students understand and master English concepts.</li>
@@ -157,14 +156,14 @@ export default function Experiences() {
             title: "2019 - 2020",
             content: (
                 <div className="text-white">
-                    {/* Job Description Section */}
+
                     <div className="text-center mb-6">
                         <h3 className="text-lg md:text-xl font-semibold">HBSR (Haji Business Sales Representative) </h3>
                         <p className="text-sm md:text-base">CIMB Niaga, Jakarta (On-site)</p>
                         <p className="text-xs md:text-sm text-gray-300">Oct 2019 - Feb 2020</p>
                     </div>
 
-                    {/* Centered Image */}
+
                     <div className="flex justify-center mb-6">
                         <img
 
@@ -176,7 +175,7 @@ export default function Experiences() {
                         />
                     </div>
 
-                    {/* Responsibilities List */}
+
                     <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
                         <li>Describe the Hajj procedures in detail to customer.</li>
                         <li>Respond to inquiries and concerns promptly and professionally.</li>
