@@ -13,7 +13,7 @@ interface Project {
     image: string;
     tag: string[];
     gitUrl: string;
-    // previewUrl: string;
+
 }
 
 const projectsData: Project[] = [
@@ -24,7 +24,7 @@ const projectsData: Project[] = [
         image: "/images/experiences/woc.png",
         tag: ["All", "Web"],
         gitUrl: "https://woc.msodikin.web.id",
-        // previewUrl: "/about",
+
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const projectsData: Project[] = [
         image: "/images/experiences/fastbook.png",
         tag: ["All", "Mobile"],
         gitUrl: "https://shorturl.at/FWvNS",
-        // previewUrl: "/",
+
     },
 ];
 
@@ -62,7 +62,7 @@ export default function Project() {
                     <h2 className="text-center text-4xl font-bold text-white mt-10 mb-10 md:mb-12">
                         My Projects
                     </h2>
-                    <div className="text-white mb-10 flex flex-row justify-center items-center gap-2 py-6">
+                    <div className="text-white mb-10 flex flex-row justify-center items-center gap-2 py-6 flex-wrap px-4">
                         <ProjectTag
                             onClick={handleTagChange}
                             name="All"
@@ -94,7 +94,7 @@ export default function Project() {
                                     description={project.description}
                                     imgUrl={project.image}
                                     gitUrl={project.gitUrl}
-                                // previewUrl={project.previewUrl}
+
                                 />
                             </motion.li>
                         ))}
