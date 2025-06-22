@@ -82,7 +82,7 @@ export default function About() {
 
                         <AnimatedContent>
                             <BlurText
-                                text="I am a Full Stack Developer with a solid foundation in leadership, communication, analytical skills, and problem-solving. After transitioning from the coffee industry to tech, I discovered a deep passion for programming and pursued self-learning both online and offline. I’m focused on rapid improvement and building user-centered solutions."
+                                text="I’m Full Stack Developer with a strong foundation in leadership, communication, analytical thinking, and problem-solving. After transitioning from the coffee industry to tech, I discovered a strong passion for programming and committed myself to self-learning through both online and offline resources. I focus on continuous improvement by learning and applying technologies such as HTML, CSS, JavaScript, React, Next.js, Node.js, and PostgreSql to build real-world applications. Every project I build reflects my growth as a developer and my dedication to delivering real-world solutions through code."
                                 delay={50}
                                 className="text-sm sm:text-base leading-relaxed max-w-xl"
                                 animateBy="words"

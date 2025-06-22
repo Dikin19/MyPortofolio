@@ -17,6 +17,15 @@ interface Project {
 
 const projectsData: Project[] = [
     {
+        id: 7,
+        title: "Dcoding Indonesia",
+        description: "Basic Dasar JavaScript",
+        issue: "Issue date June 2025",
+        expired: "Expired date -",
+        image: "/images/experiences/DasarJS.png",
+        gitUrl: "https://shorturl.at/qG9Wy",
+    },
+    {
         id: 6,
         title: "Hacktiv8 Indonesia",
         description: "Full Stack JavaScript Immersive",
@@ -36,7 +45,7 @@ const projectsData: Project[] = [
     },
     {
         id: 2,
-        title: "Dicoding Indonesia",
+        title: "Dcoding Indonesia",
         description: "Basic Web Pemrograman",
         issue: "Issue date March 2024",
         expired: "Expired date March 2027",
