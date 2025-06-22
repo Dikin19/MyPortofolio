@@ -28,6 +28,15 @@ const projectsData: Project[] = [
     },
     {
         id: 2,
+        title: "WisataApp",
+        description: "🌍 WisataApp Temukan Pesona Indonesia dalam Genggaman WisataApp adalah platform eksplorasi wisata yang dirancang untuk memperkenalkan keindahan destinasi di seluruh Indonesia melalui pengalaman digital yang modern dan responsif. Website ini menyajikan konten informatif dan inspiratif berupa diary perjalanan, rekomendasi tempat wisata, serta media interaktif yang memperkaya pengalaman pengguna dalam mencari dan menikmati informasi wisata.",
+        image: "/images/experiences/wisataIMG.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://wisataapp.msodikin.web.id/",
+
+    },
+    {
+        id: 3,
         title: "Fastbook",
         description: "fastbook adalah sebuah mobile app yang dibuat mirip dengan facebook, karena fastbook mempunya feature login, register, post, like, comment, search, follow, following, logout, dan profile, anda bisa melihat profile anda dan profile teman anda. saya menggunakan react native, graphQL, Apollo Server, dan MongoDb sebagai database. kekurangan nya adalah anda bisa membuka menggunakan App expo di link expo dibawah atau anda bisa git clone dengan klik foto project ini.",
         image: "/images/experiences/fastbook.png",

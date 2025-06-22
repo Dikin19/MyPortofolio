@@ -9,6 +9,41 @@ export default function Experiences() {
 
     const data = [
         {
+            title: "2025",
+            content: (
+                <div className="text-white">
+
+                    <div className="text-center mb-6">
+                        <h3 className="text-lg md:text-xl font-semibold">Forage Virtual internship (Software Engineering)</h3>
+                        <p className="text-sm md:text-base">Citi, Walmart USA, and Electronic Arts</p>
+                        <p className="text-xs md:text-sm text-gray-300">Jun 2025</p>
+                    </div>
+
+
+                    <div className="flex justify-center mb-6">
+                        <img
+
+                            src="images/experiences/Forage.png"
+                            alt="Coffee Shop"
+                            width={500}
+                            height={500}
+                            className="rounded-xl object-cover shadow-lg h-40 md:h-60 lg:h-72 w-full max-w-md"
+                        />
+                    </div>
+
+
+                    <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-white">
+                        <li>Develop and improve webite</li>
+                        <li>Work with other teams to create new features</li>
+                        <li>Build and improve software for Walmart’s systems</li>
+                        <li>Test code and fix bugs to keep systems running smoothly.</li>
+                        <li>Fix bugs and make sure the software runs smoothly for players.</li>
+                        <li>Work with designers and other developers to build website features.</li>
+                    </ul>
+                </div>
+            ),
+        },
+        {
             title: "2022 - 2024",
             content: (
                 <div className="text-white">
