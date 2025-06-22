@@ -11,7 +11,7 @@ type Achievement = {
 };
 
 const achievementsList: Achievement[] = [
-    { metric: "Projects", value: "2", postfix: "+" },
+    { metric: "Projects", value: "3", postfix: "+" },
     { prefix: "~", metric: "Users", value: "10" },
     { metric: "Awards", value: "5" },
     { metric: "Years", value: "2" },
