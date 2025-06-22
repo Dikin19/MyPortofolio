@@ -44,8 +44,7 @@ export default function Home() {
                 </div>
               </AnimatedContent>
               <BlurText
-                text="I specialize in building high-performance, full-stack web applications that solve real-world problems. 
-                With a strong foundation in both frontend and backend technologies, I bring ideas to life—from wireframe to production."
+                text="I’m a self-taught developer who is just starting my journey in the world of IT, with a strong interest in frontend development. Although I began from zero, I’m continuously learning and improving my skills to build functional and visually appealing web applications. Every project I work on is part of my learning process from creating responsive user interfaces to connecting them with backend services. I believe that with consistency and a growth mindset, I can deliver real solutions through technology."
                 delay={50}
                 className="text-white text-base sm:text-lg"
                 animateBy="words"

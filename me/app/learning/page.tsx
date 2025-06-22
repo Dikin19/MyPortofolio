@@ -159,7 +159,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen overflow- x-hidden bg-[#001F54]">
+    <div className="min-h-screen border overflow- x-hidden bg-[#001F54]">
       <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
         <Threads
           amplitude={1}
@@ -168,7 +168,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="container mx-auto h-screen">
+      <div className="container border mx-auto h-screen">
         <div className="grid grid-cols-12">
 
           <div className="col-span-6 relative">
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="col-span-6">
             <div className="flex items-center h-full">
 
-              <div className="flex flex-col gap-6">
+              <div className="flex border flex-col gap-6">
                 <AnimatedContent>
                   <div className="flex items-center gap-4">
                     <h1 className="text-2xl text-white font-bold">Hello, I&apos;m</h1>
@@ -208,7 +208,7 @@ export default function Home() {
                   </div>
                 </AnimatedContent>
 
-                <div className="flex flex-col items-start">
+                <div className="flex border flex-col items-start">
                   <SplitText
                     text="I'm Muhamad Sodikin"
                     className="text-2xl text-white font-semibold text-start"

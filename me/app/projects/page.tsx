@@ -94,7 +94,6 @@ export default function Project() {
                                     description={project.description}
                                     imgUrl={project.image}
                                     gitUrl={project.gitUrl}
-
                                 />
                             </motion.li>
                         ))}
