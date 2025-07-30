@@ -38,10 +38,28 @@ const projectsData: Project[] = [
     {
         id: 3,
         title: "Fastbook",
-        description: "fastbook adalah sebuah mobile app yang dibuat mirip dengan facebook, karena fastbook mempunya feature login, register, post, like, comment, search, follow, following, logout, dan profile, anda bisa melihat profile anda dan profile teman anda. saya menggunakan react native, graphQL, Apollo Server, dan MongoDb sebagai database. kekurangan nya adalah anda bisa membuka menggunakan App expo di link expo dibawah atau anda bisa git clone dengan klik foto project ini.",
+        description: "Fastbook adalah sebuah mobile app yang dibuat mirip dengan facebook, karena fastbook mempunya feature login, register, post, like, comment, search, follow, following, logout, dan profile, anda bisa melihat profile anda dan profile teman anda. saya menggunakan react native, graphQL, Apollo Server, dan MongoDb sebagai database. kekurangan nya adalah anda bisa membuka menggunakan App expo di link expo dibawah atau anda bisa git clone dengan klik foto project ini.",
         image: "/images/experiences/fastbook.png",
         tag: ["All", "Mobile"],
         gitUrl: "https://shorturl.at/FWvNS",
+
+    },
+    {
+        id: 4,
+        title: "Geography Bandung",
+        description: "Geography bandung Proyek ini bertujuan untuk memberikan gambaran umum mengenai geografi Bandung, seperti Letak geografis Bandung , Sejarah , dan Wisata.Semua informasi disajikan dalam tampilan halaman web statis yang responsif dan menarik, tanpa menggunakan JavaScript.",
+        image: "/images/experiences/Gp.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://dikin19.github.io/geografi-bandung/",
+
+    },
+    {
+        id: 5,
+        title: "MyHomepage",
+        description: "Website ini merupakan hasil dari pengembangan dan latihan pribadi dalam meningkatkan keterampilan HTML dan CSS. Halaman yang ditampilkan memiliki desain yang bersih, responsif, dan terstruktur dengan baik. Berbagai elemen seperti header, navigasi, konten utama, gambar, dan tombol interaktif ditata menggunakan teknik modern seperti Flexbox dan Grid untuk menciptakan tampilan yang rapi dan fungsional.Beberapa fitur unggulan dari website ini meliputi navigasi yang sederhana dan mudah diakses, konten yang terpusat dan tersusun rapi, tampilan yang responsif di berbagai ukuran layar, serta efek hover yang memberikan kesan interaktif dan profesional.Website ini juga berfungsi sebagai portofolio sederhana untuk menunjukkan pemahaman dasar serta penerapan praktik terbaik dalam membangun antarmuka web menggunakan HTML dan CSS murni..",
+        image: "/images/experiences/Mhp.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://dikin19.github.io/improve-html-css/",
 
     },
 ];
