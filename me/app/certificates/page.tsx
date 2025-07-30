@@ -20,10 +20,10 @@ const projectsData: Project[] = [
         id: 7,
         title: "Dcoding Indonesia",
         description: "Basic Dasar JavaScript",
-        issue: "Issue date June 2025",
-        expired: "Expired date -",
-        image: "/images/experiences/DasarJS.png",
-        gitUrl: "https://shorturl.at/qG9Wy",
+        issue: "Issue date March 2024",
+        expired: "Expired date March 2027",
+        image: "/images/experiences/DasarJs.png",
+        gitUrl: "https://shorturl.at/88Hs4",
     },
     {
         id: 6,
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
         gitUrl: "https://shorturl.at/pQefm",
     },
     {
-        id: 1,
+        id: 5,
         title: "HackerRank",
         description: "Basic Web Pemrograman",
         issue: "Issue date March 2025",
@@ -44,7 +44,7 @@ const projectsData: Project[] = [
         gitUrl: "https://www.hackerrank.com/certificates/debf90e9d31c",
     },
     {
-        id: 2,
+        id: 4,
         title: "Dcoding Indonesia",
         description: "Basic Web Pemrograman",
         issue: "Issue date March 2024",
@@ -62,7 +62,7 @@ const projectsData: Project[] = [
         gitUrl: "https://tinyurl.com/43n6v4x5",
     },
     {
-        id: 4,
+        id: 2,
         title: "Ukm-F Excellent",
         description: "As Speaker Of Education Training",
         issue: "Issue date January 2021",
@@ -71,7 +71,7 @@ const projectsData: Project[] = [
         gitUrl: "https://tinyurl.com/5hza96dv",
     },
     {
-        id: 5,
+        id: 1,
         title: "Basic English Course",
         description: "English",
         issue: "Issue date August 2020",
