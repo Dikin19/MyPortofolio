@@ -21,7 +21,7 @@ const projectsData: Project[] = [
         id: 6,
         title: "Potential Killing English Grammar (POKER)",
         description: "Saya mengembangkan website untuk POKER – Kampung Inggris Pare, sebuah lembaga kursus bahasa Inggris berbasis pesantren. Website ini memuat fitur pendaftaran online, integrasi WhatsApp, halaman program interaktif, galeri visual, dan testimoni alumni. Fokus utama pengembangan adalah kecepatan akses, mobile responsiveness, serta pengalaman pengguna yang ramah bagi calon siswa dan orang tua.",
-        image: "/images/experiences/poker21.png",
+        image: "/images/experiences/poker.png",
         tag: ["All", "Web"],
         gitUrl: "https://www.kampunginggrispoker.com",
 
@@ -39,7 +39,7 @@ const projectsData: Project[] = [
         id: 4,
         title: "WisataApp",
         description: "🌍 WisataApp Temukan Pesona Indonesia dalam Genggaman WisataApp adalah platform eksplorasi wisata yang dirancang untuk memperkenalkan keindahan destinasi di seluruh Indonesia melalui pengalaman digital yang modern dan responsif. Website ini menyajikan konten informatif dan inspiratif berupa diary perjalanan, rekomendasi tempat wisata, serta media interaktif yang memperkaya pengalaman pengguna dalam mencari dan menikmati informasi wisata.",
-        image: "/images/experiences/wisataIMG.png",
+        image: "/images/experiences/wisata.png",
         tag: ["All", "Web"],
         gitUrl: "https://wisataapp.msodikin.web.id/",
 
