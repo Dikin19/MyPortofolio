@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  gap: 2rem;
+}
+
+
+.collapsed {
+  width: 80px;
+}
+
+.sidebar__logo-name {
+  transition: opacity 0.3s ease; 
+}
+
+.hidden {
+  opacity: 0; 
+  visibility: hidden; 
+}
+
+
+.sidebar__wrapper {
+  position: fixed;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+
+.sidebar {
+  width: 17rem;
+  height: 100%;
+  background-color:#001F54;
+  padding: 1rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 270px;
+  
+} 
+
+.sidebar__top {
+  width: max-content;
+  display: flex;
+  align-items: center;  
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #D4AF37;
+}
+
+.sidebar__logo {
+  width: 3,4rem;
+  height: 3,5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__link {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffff;
+  padding: 0.9rem  1rem;
+  display: flex;
+  background-color: #D4AF37;
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+  width: 110%;
+}
+
+.sidebar__icon {
+  font-size: 1.2rem; 
+  display: inline-block;
+}
+
+.sidebar__name {
+  margin-left: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar__logo-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffff;
+  transition: opacity 0.3s ease;
+}
+
+
+.btn {
+  position: absolute;
+  right: 0;
+  top: 4.7rem;
+  border: none;
+  background-color: #D4AF37;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #D4AF37;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+}
+
+[data-collapse="true"] {
+  width: 5.4rem;
+}
+
+[data-collapse="true"] .sidebar__name,
+[data-collapse="true"] .sidebar__logo-name {
+  display: none;
+}
+
+/*test*/
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 80px; 
+  }
+
+  .sidebar.collapsed {
+      width: 80px;
+  }
+
+  .sidebar__logo-name,
+  .sidebar__name {
+      display: none; 
+  }
+
+  .sidebar.collapsed .sidebar__logo-name,
+  .sidebar.collapsed .sidebar__name {
+      display: none; 
+  }
+}
+
+/* Efek hover dan transisi elegan untuk sidebar link */
+.sidebar__link {
+  transition: all 0.3s ease;
+}
+
+.sidebar__link:hover {
+  background-color: #c49b1f; /* warna hover */
+  color: #001F54;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Hover icon di dalam link */
+.sidebar__link:hover .sidebar__icon {
+  color: #001F54;
+}
+
+/* Tombol toggle efek hover */
+.btn:hover {
+  background-color: #c49b1f;
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.5);
+}
+
+/* Link aktif (bisa dihubungkan ke pathname di React) */
+.sidebar__link.active {
+  background-color: #ffde59;
+  color: #001F54;
+  font-weight: 600;
+}
+
+/* Responsif: sidebar collapsed */
+.sidebar.collapsed .sidebar__link {
+  justify-content: center;
+  padding: 0.9rem 0.5rem;
+}
+
+.sidebar.collapsed .sidebar__icon {
+  margin: 0 auto;
+}
