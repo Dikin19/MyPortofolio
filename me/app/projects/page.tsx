@@ -18,6 +18,24 @@ interface Project {
 
 const projectsData: Project[] = [
     {
+        id: 8,
+        title: "Kinchat Gemini AI",
+        description: "KinChat adalah aplikasi chat berbasis web dengan tampilan modern dan sederhana. Aplikasi ini dirancang untuk memberikan pengalaman chatting yang cepat, responsif, dan mudah digunakan di berbagai perangkat. Project ini dibuat sebagai bagian dari portfolio untuk menunjukkan kemampuan dalam membangun UI yang rapi, interaktif, dan user-friendly.",
+        image: "/images/experiences/KinChat.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://kinchat.msodikin.web.id/",
+
+    },
+    {
+        id: 7,
+        title: "English ID Circle",
+        description: "Saya mengembangkan website untuk English Id Circle Kampung Inggris Pare, sebuah lembaga kursus bahasa Inggris Online. Website ini memuat fitur pendaftaran online, integrasi WhatsApp, halaman program interaktif, galeri visual, dan Fokus utama pengembangan adalah kecepatan akses, mobile responsiveness, serta pengalaman pengguna yang ramah bagi calon siswa dan orang tua.",
+        image: "/images/experiences/englishidc.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://www.englishidcircle.web.id/",
+
+    },
+    {
         id: 6,
         title: "Potential Killing English Grammar (POKER)",
         description: "Saya mengembangkan website untuk POKER – Kampung Inggris Pare, sebuah lembaga kursus bahasa Inggris berbasis pesantren. Website ini memuat fitur pendaftaran online, integrasi WhatsApp, halaman program interaktif, galeri visual, dan testimoni alumni. Fokus utama pengembangan adalah kecepatan akses, mobile responsiveness, serta pengalaman pengguna yang ramah bagi calon siswa dan orang tua.",
